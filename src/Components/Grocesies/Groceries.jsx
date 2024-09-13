@@ -46,9 +46,11 @@ const Groceries = () => {
             activeCategory.products.map((Element, id) => {
               return (
                 <div className="w-52 h-[20rem] cursor-pointer py-3 shadow-2xl rounded-md relative">
-                  <img className="w-36 mx-auto" src={Element.catImg} alt="" />
+                  <div className="h-[50%]" >
+                  <img className="w-36 mx-auto h-full object-contain" src={Element.catImg} alt="" />
+                  </div>
                   <p className="text-sm py-2" key={id}>
-                    {`${Element.productName}`.length < 24 ? Element.productName : `${Element.productName}`.substring(0,20)+"....more"}
+                    {`${Element.productName}`.length > 18 ? `${Element.productName}`.substring(0,18)+"....more" : Element.productName}
                   </p>
                   <div className="flex gap-2 items-center pt-2">
                     <p className="text-sm text-red-600">${Element.price}</p>
