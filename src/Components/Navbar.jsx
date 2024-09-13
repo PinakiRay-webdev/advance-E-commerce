@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-fit border-b">
-      <div className="max-w-screen-xl mx-auto py-3 px-2 flex items-center justify-between ">
+      <div className="max-w-screen-xl mx-auto py-3 px-2 flex items-center justify-between">
         <div className="flex items-center gap-1">
           <p onClick={toggleMenu} className="text-3xl md:hidden">
             {menuIcon ? <IoMenu /> : <IoClose /> }

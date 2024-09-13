@@ -1,11 +1,21 @@
-import React from 'react'
+import React , {useState , useEffect} from 'react'
 import Navbar from './Components/Navbar'
-
+import productInfo from './Data/product.json'
+import { productContext } from './Context/context'
+import Hero from './Components/Hero/Hero'
 const App = () => {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(()=>{
+    setProducts(productInfo);
+  },[])
+
   return (
-    <React.Fragment>
+    <productContext.Provider value={{products , setProducts}}>
       <Navbar/>
-    </React.Fragment>
+      <Hero/>
+    </productContext.Provider>
   )
 }
 
