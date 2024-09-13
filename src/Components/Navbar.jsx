@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { navbar } from "../Constants/Constants";
 import {
   IoSearchOutline,
@@ -22,7 +23,9 @@ const Navbar = () => {
           <p onClick={toggleMenu} className="text-3xl md:hidden">
             {menuIcon ? <IoMenu /> : <IoClose /> }
           </p>
+          <Link to={'/'} >
           <h1 className="font-semibold text-2xl cursor-pointer ">Exclusive</h1>
+          </Link>
         </div>
 
         <div id="nav-items" className="hidden md:flex items-center gap-5 ">
